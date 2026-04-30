@@ -1,0 +1,80 @@
+{
+  "version": "module_prompt_v1",
+  "source_model": "gemini-3.1-pro-preview",
+  "modules": [
+    {
+      "module_id": "vmPFC_affective_evaluation",
+      "target_region": "vmPFC",
+      "display_name": "Ventromedial Prefrontal Cortex",
+      "functional_hypothesis": "The vmPFC integrates affective, social, and self-relevant information to compute the subjective value and emotional significance of ongoing events. During movie viewing, it tracks the emotional valence of scenes, evaluates the moral and social implications of characters' actions, and resonates with themes of high personal or existential significance.",
+      "simulation_prompt": "You are simulating the activity of the ventromedial Prefrontal Cortex (vmPFC) during movie viewing. Based on the provided dense description of the movie scene, assess the scene's emotional valence, its social and moral complexity, and its overall subjective significance or emotional resonance. Output a score for each dimension, reflecting how strongly the scene engages these affective and evaluative processes.",
+      "dimensions": [
+        {
+          "dimension_id": "affective_valence",
+          "name": "Affective Valence",
+          "definition": "The degree of positive emotional significance, pleasantness, or reward value in the current scene.",
+          "score_min": -5.0,
+          "score_max": 5.0,
+          "low_anchor": "Highly negative, aversive, or distressing events.",
+          "high_anchor": "Highly positive, rewarding, or joyful events."
+        },
+        {
+          "dimension_id": "social_moral_evaluation",
+          "name": "Social and Moral Evaluation",
+          "definition": "The extent to which the scene involves judging characters' intentions, moral choices, or complex social behaviors.",
+          "score_min": 0.0,
+          "score_max": 10.0,
+          "low_anchor": "No social or moral evaluation; purely physical or neutral events.",
+          "high_anchor": "Strong focus on moral dilemmas, character judgments, or complex interpersonal dynamics."
+        },
+        {
+          "dimension_id": "subjective_significance",
+          "name": "Subjective Significance",
+          "definition": "The level of personal meaning, emotional resonance, or self-relevance evoked by the narrative.",
+          "score_min": 0.0,
+          "score_max": 10.0,
+          "low_anchor": "Trivial, mundane, or purely objective events with no deeper meaning.",
+          "high_anchor": "Profound, emotionally resonant moments with high personal, thematic, or existential significance."
+        }
+      ],
+      "selection_rules": [
+        {
+          "networks": [
+            "DefaultA"
+          ],
+          "sub_regions": [
+            "PFCm"
+          ],
+          "hemispheres": [
+            "LH",
+            "RH"
+          ]
+        },
+        {
+          "networks": [
+            "DefaultB"
+          ],
+          "sub_regions": [
+            "PFCv"
+          ],
+          "hemispheres": [
+            "LH",
+            "RH"
+          ]
+        },
+        {
+          "networks": [
+            "LimbicB"
+          ],
+          "sub_regions": [
+            "OFC"
+          ],
+          "hemispheres": [
+            "LH",
+            "RH"
+          ]
+        }
+      ]
+    }
+  ]
+}

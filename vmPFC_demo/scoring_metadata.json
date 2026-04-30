@@ -1,0 +1,20 @@
+{
+  "n_segments": 39,
+  "n_trs": 76,
+  "tr_s": 1.49,
+  "alignment": "overlap_weighted",
+  "ordered_feature_keys": [
+    {
+      "module_id": "vmPFC_affective_evaluation",
+      "dimension_id": "affective_valence"
+    },
+    {
+      "module_id": "vmPFC_affective_evaluation",
+      "dimension_id": "social_moral_evaluation"
+    },
+    {
+      "module_id": "vmPFC_affective_evaluation",
+      "dimension_id": "subjective_significance"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[project]
+name = "description-fmri"
+version = "0.1.0"
+description = "Brain-region prompt scoring workflow for movie-fMRI features"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "google-genai>=1.68.0",
+    "httpx[socks]>=0.28.1",
+]
+
+[project.optional-dependencies]
+encoding = [
+    "numpy",
+    "scikit-learn",
+    "h5py",
+]

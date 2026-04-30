@@ -1,0 +1,12 @@
+.worktrees/
+.claude/worktrees/
+.claude/settings.local.json
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+test_data/
+test_output/
+*.mkv
+.env
